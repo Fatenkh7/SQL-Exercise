@@ -36,3 +36,15 @@ UPDATE graduates SET Graduation = '08/09/2018' WHERE name='Layal';
 #Remove Layal's record from students
 DELETE FROM students
 WHERE name='Layal';
+
+#commit('create table')
+
+#Find the name of employees that work in companies made before 2000.
+SELECT employees.name FROM employees INNER JOIN companies
+ON employees.Company= companies.name
+WHERE companies.Date < "2000";
+
+#Find the name of company that has a graphic designer.
+SELECT Company FROM employees
+WHERE Role="Graphic Designer";
+#Commit ("Joins")
