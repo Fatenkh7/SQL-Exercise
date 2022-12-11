@@ -22,3 +22,17 @@ UPDATE students SET Points = Points+100 WHERE Name = 'Basma';
 
 #Decrease the points of Alex because he's late today #
 UPDATE students SET Points = Points-100 WHERE Name = 'Alex';
+
+#commit "basic querry"
+
+#Copy Layal's data from students to graduates
+INSERT INTO graduates (ID, name, Age, Gender, Points)
+SELECT ID, name, Age, Gender, Points
+FROM students WHERE name='Layal';
+
+#Add the graduation date previously mentioned to Layal's record in graduates
+UPDATE graduates SET Graduation = '08/09/2018' WHERE name='Layal';
+
+#Remove Layal's record from students
+DELETE FROM students
+WHERE name='Layal';
