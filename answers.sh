@@ -48,3 +48,25 @@ WHERE companies.Date < "2000";
 SELECT Company FROM employees
 WHERE Role="Graphic Designer";
 #Commit ("Joins")
+
+#Find the person with the highest number of points in students
+SELECT name, MAX(Points)
+FROM students;
+
+#Find the average of points in students
+SELECT AVG(Points)
+FROM students;
+
+#Find the number of students that have 500 points
+SELECT COUNT(ID)
+FROM students
+WHERE Points="500";
+
+#Find the names of students that contains 's'
+SELECT name FROM students WHERE name like "%s%";
+
+#Find all students based on the decreasing order of their points
+select * FROM students ORDER by Points DESC;
+
+#commit ("Count & Filter")
+#push
